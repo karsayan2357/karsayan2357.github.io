@@ -1,0 +1,64 @@
+<html>
+    <head><meta charset = 'UTF-8'>
+    <title>Combinatorics Problem with Group Theory</title>
+    <script id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
+</head>
+    <body>
+        <h1>A Combinatorics Problem with a touch of Group Theory</h1>
+        <hr>
+        <p>In this blog we shall discuss about a problem generated from Combinatorics, specifically <b>Invariance Principle</b>, but with a Group theoretic approach.</p> 
+
+    <h2>Problem</h2>
+        <p> Suppose we have \(r\) many red balls and \(b\) many black balls in a box. Now in each step, we draw two balls from the bag and do the following operations.
+            <ul>
+               <li>If the two drawn balls are of <b>same color</b>, then we replace the two balls with a <b>red ball</b> in that box.</li>
+               <li>If the two drawn balls are of <b>different color</b>, then we replace the two balls with a <b>black ball</b> in that box.</li>
+            </ul>
+            Now can we predict the color of the final ball?
+        </p>
+    <h3><i>Solution</i></h3>
+        <p> We start by denoting the two balls as \(0\) for red and \(1\) for black . Now we define a binary operation \(*\) on the set \(G\) = \(\{0,1\}\) such that \(\forall a,b\in G\),
+            \[
+                a * b = 0 \iff a = b .
+            \]
+        </p>
+        <p>
+            <b><u>Claim.</u></b> \(*\) is commutative and associative.
+            <details style = 'color:seagreen'>
+                <summary>
+                    Proof.
+                </summary>
+                <ol>
+                    <li> It is clear from the definition of \(*\) that \(0 * 0 = 1 * 1 = 0 \text{ and } 0*1 = 1*0 = 1\). So clearly \(*\) is commutative.</li>
+                    <li> Now as we have already showed that \(*\) is commutative, the only checking need is for \(a*(a*a) \text{ and }a * (b*b)\), where \(a \neq b\). Both of them are just case checking.</li>
+                </ol>
+            </details>
+        </p>
+        <p><b><u>Fun Fact :</u></b> For this particular example we get that \((G,*)\) is an <b>abelian group</b>. </p>
+        <p>
+            Now that we have shown that \(*\) is commutative and associative, the product \(a_{\pi(1)}*a_{\pi(2)}\cdots a_{\pi(k)}\) is well defined for any positive integer \(k\) and any permutation \(\pi\) of \([k]\) and also the value of this product is invariant over all choices of \(\pi\) for a particular \(k\).
+        </p>
+        <p>
+            Notice that the operation of the game involving the balls is the same for the above binary operation. What we are doing essentially for this problem is the total product of the \(r+b\) many elements from \(G\), <i>i.e.</i>, either \(0\) or \(1\) for particular order with a suitable set of parenthesis but above arguement shows that the value of the product would be same for any permutation of the elemennts. So for simplicity, we consider the following product.
+            \[
+            \underbrace{0*0\cdots0}_{r\text{ many 0's }}*\underbrace{1*1\cdots1}_{b\text{ many 1's}}
+            \]
+            Now obviously the first part of the product will be \(0\) itself and after the product of \(0*1\), the product becomes 
+            \[
+            \underbrace{1*1\cdots1}_{n-1 \text{ many 1's}}
+            \]
+            This products results in \(1\) if \(n-1\) is odd and results in \(0\) if \(n-1\) is even.
+        </p>
+        <h3>
+            Answer
+        </h3>
+        <div> 
+            <ul>
+                <li> If \(n\) is odd, then the final ball is <span style="color: red;">red</span>.</li>
+                <li> If \(n\) is even, then the final ball is <span style="color: black;">black</span>.</li>
+            </ul>
+        </div>
+</body>
+</html>
