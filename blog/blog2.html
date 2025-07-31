@@ -1,0 +1,63 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>TOMATO Subjective</title>
+        <script id="MathJax-script" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+        </script>
+    </head>
+    <body>
+        <p>
+            Test of Mathematics at 10+2 Level, or better known as TOMATO, is a problem book published by Indian Statistical Institute for high school students. This books contains two sections, one is for practice problems and the other is for past year ISI entrance problems. Although there are some very good solution sets of the objective section of the practice problems and the past year section, there is no solution set for the entire subjective part of the practice problems section.
+        </p>
+        <p>
+            I have tried to make the full solution for that section. Here is a copy of the solution set. <a href="tomato_sub-1.pdf">TOMATO_SUBJ</a>.
+        </p>
+        <h3>A minor correction</h3>
+        <p>
+            The problem number 138 contains a link to a stack-math solution that is not very legible. So here I give you my solution or rather an extended hint for that problem.
+        </p>
+        <h3>
+            Problem
+        </h3>
+        <p>
+            If \(f(n)\) denotes the nearest interger to \(\sqrt{n}\), then prove that,
+                \[
+                \sum_{n=1}^\infty \frac{2^{f(n)}+\frac{1}{2^{f(n)}}}{2^n} = 3.
+                \]
+        </p>
+        <h4><i>Solution</i></h4>
+        <p>
+            We shall divdie this sum into certains groups. We define a sequence of sets as the following. For any \(N\in\mathbb{N}\), we define
+            \[
+                S_N := \{n : \sqrt{n} \text{ is closest to } N\} \equiv \{n : \lfloor{\sqrt{n}+\frac{1}{2}\rfloor = N}\}.
+            \]
+            As we know that for any real \(x\), the nearest integer to \(x\) is \(\lfloor{x+\frac{1}{2}}\rfloor\).
+        </p>
+        <p>
+            Now we claim that cardinality of \(S_N\) is \(2N\).
+            <details style="color: darkslategray;">
+                <summary>
+                    Proof
+                </summary>
+                Exercise, use induction and look at the midpoints of three consecutive squares. You shall see that 
+                \[
+                S_N = \{(N-1)^2+N, (N-1)^2+N+1, \ldots, N^2+N\}.
+                \]
+            </details>
+        </p>
+        <p>
+            Now assuming the above claim to be true, we are just left to do some simple algebraic manipulations.
+            <details>
+                <summary>
+                    You can do it as an exercise and check here.
+                </summary>
+                \[
+                \sum_{n=1}^\infty \frac{2^{f(n)}+\frac{1}{2^{f(n)}}}{2^n} = \sum_{N=1}^\infty \sum_{r=N^2-N+1}^{N^2+N} \frac{2^N + \frac{1}{2^N}}{2^r} = \sum_{N=1}^\infty \frac{2^N + \frac{1}{2^N}}{2^{N^2-N+1}}\times\frac{1-\frac{1}{2^{2N}}}{1-\frac{1}{2}}
+                \]
+                \[
+                =\sum_{N=1}^\infty \frac{1}{2^{N^2-N}} - \frac{1}{2^{N^2+2N}} = \frac{1}{2^{-1}} + \frac{1}{2^0} = 3.                \]
+            </details>
+        </p>
+    </body>
+</html>
