@@ -1,6 +1,6 @@
 body{
     background-color: darkslategray;
-    font-family: "Comic Sans MS", "Comic Sans", cursive;
+    font-family: 'Baloo 2';
     color: aliceblue;
     a:link{
         color:beige;
@@ -8,4 +8,5 @@ body{
     a:visited{
         color: beige;
     }
+
 }
