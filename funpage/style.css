@@ -1,0 +1,11 @@
+body{
+    background-color: darkslategray;
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+    color: aliceblue;
+    a:link{
+        color:beige;
+    }
+    a:visited{
+        color: beige;
+    }
+}
