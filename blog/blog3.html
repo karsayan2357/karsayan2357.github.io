@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title> Mod Inverse Algorithm</title>
+        <link rel="stylesheet" href="style.css">
+        <script id="MathJax-script" async
+        src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+      </script>
+    </head>
+    <body>
+        <h1>Algorithm for Finding Modular Inverse</h1>
+        <hr>
+        <h3>Necessary Definitions</h3>
+        <dl>
+            <dt><b><u>Modular Inverse</u></b></dt>
+            <dd>For a natural number \(n\) and an integer \(a\), we say that \(b\) is an <i>inverse</i> of \(a\) \(\pmod n\) if 
+                \[
+                ab \equiv 1 \pmod{n}.
+                \] </dd>
+            
+        </dl>
+        <h2>Designing Algorithm for finding the mod inverse</h2>
+        <p>So the problem for this algorithm will be the following.</p>
+        <section><b>Input:</b> An integer \(a\) and a natual number \(n\) such that \(\gcd(a,n)=1\)</section>
+        <section><b>Output:</b> A natural number \(b\) such that \(ab \equiv 1\pmod{n}\)</section>
+        <h3> A very bad Algorithm</h3>
+<pre style="text-align: left; font-size: large;">
+<code>
+Brute Force Algorithm:
+1. Initialize i = 1;
+2. For i from 1 to n-1:
+3.   check a*b (mod n);
+4.      if a*b (mod n) == 1{
+            return b; }
+5.   End if
+6. End for</code>
+</pre>
+<p>This code is bad as the running time of it is exponential.</p>
+</body>
+</html>
