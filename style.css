@@ -1,8 +1,28 @@
-body{
-  background-color: #FAEBD7;
-  font-family: 'Latin Modern Roman', serif;
-}
-.bottom{
-  position: fixed;
-  bottom: 0;
-}
+ body {
+      font-family: 'Source Serif Pro', serif;
+      line-height: 1.7;
+      margin: 60px auto;
+      max-width: 800px;
+      font-size: 18px;
+      color: #2c2c2c;
+    }
+    h1 {
+      font-size: 2.4em;
+      font-weight: 600;
+      margin-bottom: 0.5em;
+    }
+    p {
+      margin-bottom: 1.2em;
+    }
+    .links {
+      margin-top: 25px;
+    }
+    .links a {
+      margin-right: 18px;
+      text-decoration: none;
+      color: #0056b3;
+      font-weight: 600;
+    }
+    .links a:hover {
+      text-decoration: underline;
+    }
