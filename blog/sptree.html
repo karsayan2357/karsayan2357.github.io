@@ -72,6 +72,41 @@ The <em>contraction</em> of a graph \( X \) by an edge \( e \) with endpoints \(
 <p>
 <strong>Proof.</strong> The number of spanning trees \( \tau(X) \) of \( X \) equals the sum of the number of spanning trees that do not contain \( e \) and the number of spanning trees that do contain \( e \). The spanning trees of \( X \) that omit \( e \) are counted by \( \tau(X - e) \). The family of spanning trees that contain \( e \) is in bijective correspondence with the set of spanning trees of \( X / e \). When we contract \( e \) in a spanning tree that contains \( e \), we obtain a spanning tree of \( X / e \) because the resulting subgraph is spanning, connected, and has the correct number of edges. Since other edges maintain their identity under contraction, no two trees map to the same spanning tree of \( X / e \), and each spanning tree of \( X \) arises this way. This establishes the theorem.
 </p>
+
+    <p>
+Now that we have seen the recursive relation for counting spanning trees, we shall move on to the main theorem — the Kirchhoff Matrix Tree Theorem — which provides a closed-form formula to compute \( \tau(X) \) directly using matrices associated with the graph.
+</p>
+
+    det L[i] = det L(X − e)[i] + det L(X − e)[i, j]
+= det L(X − e)[i] + det L[i, j],
+where the second part follows since L(X − e)[i, j] = L[i, j]. When contracting the
+edge e = i j of X and creating X/e, assume that the vertex set of X is [n] \ {i}. Note
+that L(X/e)[ j] = L[i, j]. Using the previous equation, we get that
+det L[i] = det L(X − e)[i] + det L(X/e)[i].
+From the induction hypothesis, we know that det L(X − e)[i] = τ (X − e) and
+det L(X/e)[i] = τ (X/e)and, therefore, by Theorem 5.3.1, we get that
+det L[i] = τ (X − e) + τ (X/e) = τ (X),
+which proves part (1).
+For parts (2) and (3), note that adj(L)L = Ladj(L) = det(L)I n = 0 since L has
+0 as an eigenvalue (see Theorem 4.5.2). This means that each column of adj(L) is
+contained in the eigenspace corresponding to the eigenvalue 0 of L. By part (3) of
+Theorem 4.5.2, we get that all the entries of any given column of adj(L) must be
+equal. Since the diagonal entries of adj(L) equal τ (X), it follows that all the entries
+of adj(L) equal τ (X).
+For part (4), note first that J 2
+n = n Jn and Jn L = L n J = O n . Hence, (n I n −
+Jn )(Jn + L) = nLand, therefore,
+adj(nL) = adj((n I n − Jn )(Jn + L)) = adj(Jn + L)adj(n I n − Jn ).
+But adj(n I n − Jn ) = n n−2 Jn by Cayley’s formula and adj(nL) = n n−1 adj(L). We
+therefore deduce that nadj(L) = [adj(Jn + L)]Jn . By part (3), adj(L) = τ (X)Jn
+and so we obtain that nτ (X)Jn = [adj(J + L)]Jn . Multiplying both sides of the
+equation by (J + L) on the left gives that nτ (X)(J + L)J = [det(J + L)]J . But
+(Jn + L)Jn = J 2
+n + L Jn = n Jn . Putting everything together, we get the desired
+result.
+For part (5), note that the eigenvalues of Jn + L are n, μ2, . . . , μn , and det(Jn +
+L) = n n
+j=2 μ j . The result follows using part (4). 
   </div>
 
   
