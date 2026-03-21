@@ -74,14 +74,13 @@ The <em>contraction</em> of a graph \( X \) by an edge \( e \) with endpoints \(
 </p>
 
     <p>
-Now that we have seen the recursive relation for counting spanning trees, we shall move on to the main theorem — the Kirchhoff Matrix Tree Theorem — which provides a closed-form formula to compute \( \tau(X) \) directly using matrices associated with the graph.
+Now that we have seen the recursive relation for counting spanning trees, we shall move on to the main theorem, the Kirchhoff Matrix Tree Theorem, which provides a closed-form formula to compute \( \tau(X) \) directly using matrices associated with the graph.
 </p>
 
     <!-- Matrix Notation -->
 <p>
-For a matrix \( M \), we denote the entry in the \( i \)-th row and \( j \)-th column by \( M[i,j] \).
+For a matrix \( M \), we denote matrix obtained by removing the \(i\)-th row and \(j\)-th column from \(M\).
 </p>
-
 <!-- Kirchhoff Matrix-Tree Theorem Box -->
 <div style="border-left: 5px solid #2196F3; background-color: #f0f8ff; padding: 15px; margin: 20px 0; border-radius: 5px;">
   <strong>Theorem 5.3.2 (Kirchhoff’s Matrix-Tree Theorem).</strong> Let \( X \) be a graph with vertex set \([n]\) for some \( n \ge 1 \) and Laplacian matrix \( L \). Then:
@@ -94,13 +93,60 @@ For a matrix \( M \), we denote the entry in the \( i \)-th row and \( j \)-th c
   </ol>
 </div>
 
-<!-- Proof -->
+<!-- Full Proof -->
 <p>
-<strong>Proof.</strong> Clearly, part (2) is a generalization of part (1). For part (1), we use strong induction on the number of edges. Let \( e = ij \) be an edge of \( X \). Denote by \( E \) the \(([n] \setminus \{i\}) \times ([n] \setminus \{i\})\) matrix with all zeros except \( E[j,j] = 1 \). Then \( L[i] = L(X-e)[i] + E \), which implies
+<strong>Proof.</strong> Clearly, part (2) is a generalization of part (1), but we prove (1) first and use it to establish (2). We proceed by strong induction on the number of edges, leaving the base case to the reader. Let \( e = ij \) be an edge of \( X \), and denote by \( E \) the \(([n] \setminus \{i\}) \times ([n] \setminus \{i\})\) matrix with all entries zero except \( E[j,j] = 1 \). Note that
 \[
-\det L[i] = \det L(X-e)[i] + \det L(X-e)[i,j] = \det L(X-e)[i] + \det L[i,j].
+L[i] = L(X-e)[i] + E.
 \]
-Contracting \( e \) gives \( L(X/e)[j] = L[i,j] \), and by induction hypothesis, \( \det L(X-e)[i] = \tau(X-e) \), \( \det L(X/e)[i] = \tau(X/e) \). Using Theorem 5.3.1, we get \( \det L[i] = \tau(X-e) + \tau(X/e) = \tau(X) \), proving part (1). The remaining parts follow by linear algebra properties of Laplacian and adjacency matrices as described in the theorem statement.
+This implies
+\[
+\det L[i] = \det L(X-e)[i] + \det L(X-e)[i,j] = \det L(X-e)[i] + \det L[i,j],
+\]
+since \( L(X-e)[i,j] = L[i,j] \).  
+
+When contracting the edge \( e = ij \) and forming \( X/e \), assume the vertex set of \( X/e \) is \([n] \setminus \{i\}\). Then
+\[
+L(X/e)[j] = L[i,j].
+\]
+By the induction hypothesis,
+\[
+\det L(X-e)[i] = \tau(X-e), \quad \det L(X/e)[i] = \tau(X/e).
+\]
+Thus, by Theorem 5.3.1,
+\[
+\det L[i] = \tau(X-e) + \tau(X/e) = \tau(X),
+\]
+which proves part (1).
+
+For parts (2) and (3), note that \( \mathrm{adj}(L)L = L\,\mathrm{adj}(L) = \det(L) I_n = 0 \) since \( L \) has 0 as an eigenvalue. This implies that each column of \( \mathrm{adj}(L) \) lies in the eigenspace corresponding to the eigenvalue 0 of \( L \). By properties of Laplacian matrices, all entries of any column of \( \mathrm{adj}(L) \) are equal, and the diagonal entries equal \( \tau(X) \). Hence,
+\[
+\mathrm{adj}(L) = \tau(X) J_n.
+\]
+
+For part (4), note that \( J_n^2 = n J_n \) and \( J_n L = L J_n = O_n \). Then
+\[
+(n I_n - J_n)(J_n + L) = n L,
+\]
+so
+\[
+\mathrm{adj}(nL) = \mathrm{adj}((n I_n - J_n)(J_n + L)) = \mathrm{adj}(J_n + L)\, \mathrm{adj}(n I_n - J_n).
+\]
+Using Cayley’s formula, \( \mathrm{adj}(n I_n - J_n) = n^{n-2} J_n \) and \( \mathrm{adj}(n L) = n^{n-1} \mathrm{adj}(L) \), giving
+\[
+n\, \mathrm{adj}(L) = [\mathrm{adj}(J_n + L)] J_n \quad \implies \quad n \tau(X) J_n = [\mathrm{adj}(J_n + L)] J_n.
+\]
+Multiplying both sides by \( J_n + L \) on the left yields the desired result.
+
+Finally, for part (5), note that the eigenvalues of \( J_n + L \) are \( n, \mu_2, \dots, \mu_n \), so
+\[
+\det(J_n + L) = n \prod_{j=2}^{n} \mu_j,
+\]
+and part (4) then gives
+\[
+\tau(X) = \frac{\mu_2 \cdot \dots \cdot \mu_n}{n}.
+\]
+This completes the proof.
 </p>
   </div>
 
