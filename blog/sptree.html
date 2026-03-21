@@ -77,36 +77,31 @@ The <em>contraction</em> of a graph \( X \) by an edge \( e \) with endpoints \(
 Now that we have seen the recursive relation for counting spanning trees, we shall move on to the main theorem — the Kirchhoff Matrix Tree Theorem — which provides a closed-form formula to compute \( \tau(X) \) directly using matrices associated with the graph.
 </p>
 
-    det L[i] = det L(X − e)[i] + det L(X − e)[i, j]
-= det L(X − e)[i] + det L[i, j],
-where the second part follows since L(X − e)[i, j] = L[i, j]. When contracting the
-edge e = i j of X and creating X/e, assume that the vertex set of X is [n] \ {i}. Note
-that L(X/e)[ j] = L[i, j]. Using the previous equation, we get that
-det L[i] = det L(X − e)[i] + det L(X/e)[i].
-From the induction hypothesis, we know that det L(X − e)[i] = τ (X − e) and
-det L(X/e)[i] = τ (X/e)and, therefore, by Theorem 5.3.1, we get that
-det L[i] = τ (X − e) + τ (X/e) = τ (X),
-which proves part (1).
-For parts (2) and (3), note that adj(L)L = Ladj(L) = det(L)I n = 0 since L has
-0 as an eigenvalue (see Theorem 4.5.2). This means that each column of adj(L) is
-contained in the eigenspace corresponding to the eigenvalue 0 of L. By part (3) of
-Theorem 4.5.2, we get that all the entries of any given column of adj(L) must be
-equal. Since the diagonal entries of adj(L) equal τ (X), it follows that all the entries
-of adj(L) equal τ (X).
-For part (4), note first that J 2
-n = n Jn and Jn L = L n J = O n . Hence, (n I n −
-Jn )(Jn + L) = nLand, therefore,
-adj(nL) = adj((n I n − Jn )(Jn + L)) = adj(Jn + L)adj(n I n − Jn ).
-But adj(n I n − Jn ) = n n−2 Jn by Cayley’s formula and adj(nL) = n n−1 adj(L). We
-therefore deduce that nadj(L) = [adj(Jn + L)]Jn . By part (3), adj(L) = τ (X)Jn
-and so we obtain that nτ (X)Jn = [adj(J + L)]Jn . Multiplying both sides of the
-equation by (J + L) on the left gives that nτ (X)(J + L)J = [det(J + L)]J . But
-(Jn + L)Jn = J 2
-n + L Jn = n Jn . Putting everything together, we get the desired
-result.
-For part (5), note that the eigenvalues of Jn + L are n, μ2, . . . , μn , and det(Jn +
-L) = n n
-j=2 μ j . The result follows using part (4). 
+    <!-- Matrix Notation -->
+<p>
+For a matrix \( M \), we denote the entry in the \( i \)-th row and \( j \)-th column by \( M[i,j] \).
+</p>
+
+<!-- Kirchhoff Matrix-Tree Theorem Box -->
+<div style="border-left: 5px solid #2196F3; background-color: #f0f8ff; padding: 15px; margin: 20px 0; border-radius: 5px;">
+  <strong>Theorem 5.3.2 (Kirchhoff’s Matrix-Tree Theorem).</strong> Let \( X \) be a graph with vertex set \([n]\) for some \( n \ge 1 \) and Laplacian matrix \( L \). Then:
+  <ol>
+    <li>For any \( i \in [n] \), \( \tau(X) = \det L[i] \).</li>
+    <li>For any \( i,j \in [n] \), \( \tau(X) = (-1)^{i+j} \det L[i,j] \).</li>
+    <li>\( \mathrm{adj}(L) = \tau(X) J_n \).</li>
+    <li>\( \tau(X) = n^{-2} \det(J_n + L) \).</li>
+    <li>If \( 0 = \mu_1 \le \mu_2 \le \dots \le \mu_n \) are the eigenvalues of \( L \), then \( \tau(X) = \frac{\mu_2 \cdot \dots \cdot \mu_n}{n} \).</li>
+  </ol>
+</div>
+
+<!-- Proof -->
+<p>
+<strong>Proof.</strong> Clearly, part (2) is a generalization of part (1). For part (1), we use strong induction on the number of edges. Let \( e = ij \) be an edge of \( X \). Denote by \( E \) the \(([n] \setminus \{i\}) \times ([n] \setminus \{i\})\) matrix with all zeros except \( E[j,j] = 1 \). Then \( L[i] = L(X-e)[i] + E \), which implies
+\[
+\det L[i] = \det L(X-e)[i] + \det L(X-e)[i,j] = \det L(X-e)[i] + \det L[i,j].
+\]
+Contracting \( e \) gives \( L(X/e)[j] = L[i,j] \), and by induction hypothesis, \( \det L(X-e)[i] = \tau(X-e) \), \( \det L(X/e)[i] = \tau(X/e) \). Using Theorem 5.3.1, we get \( \det L[i] = \tau(X-e) + \tau(X/e) = \tau(X) \), proving part (1). The remaining parts follow by linear algebra properties of Laplacian and adjacency matrices as described in the theorem statement.
+</p>
   </div>
 
   
