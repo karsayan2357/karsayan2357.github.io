@@ -105,11 +105,7 @@ This implies
 \]
 since \( L(X-e)[i,j] = L[i,j] \).  
 
-When contracting the edge \( e = ij \) and forming \( X/e \), assume the vertex set of \( X/e \) is \([n] \setminus \{i\}\). Then
-\[
-L(X/e)[j] = L[i,j].
-\]
-By the induction hypothesis,
+When contracting the edge \( e = ij \) and forming \( X/e \), assume the vertex set of \( X/e \) is \([n] \setminus \{i\}\). Then, \(L(X/e)[j] = L[i,j]\). By the induction hypothesis,
 \[
 \det L(X-e)[i] = \tau(X-e), \quad \det L(X/e)[i] = \tau(X/e).
 \]
@@ -119,16 +115,9 @@ Thus, by the above theorem,
 \]
 which proves part (1).
 
-For parts (2) and (3), note that \( \mathrm{adj}(L)L = L\,\mathrm{adj}(L) = \det(L) I_n = 0 \) since \( L \) has 0 as an eigenvalue. This implies that each column of \( \mathrm{adj}(L) \) lies in the eigenspace corresponding to the eigenvalue 0 of \( L \). By properties of Laplacian matrices, all entries of any column of \( \mathrm{adj}(L) \) are equal, and the diagonal entries equal \( \tau(X) \). Hence,
-\[
-\mathrm{adj}(L) = \tau(X) J_n.
-\]
+For parts (2) and (3), note that \( \mathrm{adj}(L)L = L\,\mathrm{adj}(L) = \det(L) I_n = 0 \) since \( L \) has 0 as an eigenvalue. This implies that each column of \( \mathrm{adj}(L) \) lies in the eigenspace corresponding to the eigenvalue 0 of \( L \). By properties of Laplacian matrices, all entries of any column of \( \mathrm{adj}(L) \) are equal, and the diagonal entries equal \( \tau(X) \). Hence, \(\mathrm{adj}(L) = \tau(X) J_n\).
 
-For part (4), note that \( J_n^2 = n J_n \) and \( J_n L = L J_n = O_n \). Then
-\[
-(n I_n - J_n)(J_n + L) = n L,
-\]
-so
+For part (4), note that \( J_n^2 = n J_n \) and \( J_n L = L J_n = O_n \). Then, \((n I_n - J_n)(J_n + L) = n L\), so
 \[
 \mathrm{adj}(nL) = \mathrm{adj}((n I_n - J_n)(J_n + L)) = \mathrm{adj}(J_n + L)\, \mathrm{adj}(n I_n - J_n).
 \]
