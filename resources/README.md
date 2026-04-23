@@ -12,6 +12,8 @@ The list is in its very early state. Hopefully this list will be updated by me f
 - [Comp Arith Geo](https://youtube.com/playlist?list=PLFW6lRTa1g816SCa2bOOgWEkP5YOhh3xw&si=bdZI-Vffrxr2IGCA)
 - [Comp NT & Alg](https://youtube.com/playlist?list=PLFW6lRTa1g82gyMcQGXl3dpWelEyMLxRH&si=39swleFTcZoZltA3)
 - [MIT 6.046J](https://youtube.com/playlist?list=PLUl4u3cNGP6317WaSNfmCvGym2ucw3oGp&si=4s2SWJu_0Y-NRMLt)
+- [Rand Algo CMU](https://www.cs.cmu.edu/~avrim/Randalgs97/)
+- [Coding CMU](https://www.cs.cmu.edu/~venkatg/teaching/codingtheory-au14/)
 
 
 ## WEBSITES
