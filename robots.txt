@@ -1,0 +1,4 @@
+User-agent: *
+Disallow:
+
+Sitemap: https://karsayan2357.github.io/al-folio/sitemap.xml
