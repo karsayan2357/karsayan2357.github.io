@@ -9,7 +9,7 @@ All courses taken at [Indian Statistical Institute, Kolkata](https://www.isical.
 
 ## First Year
 
-**Semester I** &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **Semester II**
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
 
 | Semester I | Semester II |
 |---|---|
@@ -18,11 +18,10 @@ All courses taken at [Indian Statistical Institute, Kolkata](https://www.isical.
 | Vector and Matrices I | Vector and Matrices II |
 | Statistical Methods I | Statistical Methods II |
 | Introduction to Programming and Data Structures | Numerical Analysis |
-| Remedial English *(Non-Credit)* | |
 
 ## Second Year
 
-| Semester I | Semester II |
+| Semester III | Semester IV |
 |---|---|
 | Analysis III | Introduction to Stochastic Processes |
 | Probability Theory III | Discrete Mathematics |
