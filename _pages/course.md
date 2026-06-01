@@ -5,30 +5,58 @@ layout: single
 author_profile: true
 ---
 
-All courses taken at [Indian Statistical Institute, Kolkata](https://www.isical.ac.in/index).
+# Coursework at ISI, Kolkata
+
+These are the courses that I have taken during my B.Stat. at <a href = 'https://www.isical.ac.in/index' target = 'blank'>Indian Statistical Institute, Kolkata</a>.
 
 ## First Year
 
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<details>
+<summary>Semester I</summary>
+<ul>
+  <li>Analysis I</li>
+  <li>Probability Theory I [<a href = 'https://arnabc74.github.io/prob1_2024/notes.html' target = 'blank'>course webpage</a>]</li>
+  <li>Vector and Matrices I</li>
+  <li>Statistical Methods I</li>
+  <li>Introduction to Programming and Data Structures</li>
+</ul>
+</details>
 
-| Semester I | Semester II |
-|---|---|
-| Analysis I | Analysis II |
-| Probability Theory I | Probability Theory II |
-| Vector and Matrices I | Vector and Matrices II |
-| Statistical Methods I | Statistical Methods II |
-| Introduction to Programming and Data Structures | Numerical Analysis |
+<details>
+<summary>Semester II</summary>
+<ul>
+  <li>Analysis II</li>
+  <li>Probability Theory II [<a href = 'https://arnabc74.github.io/prob2_2025/index.html' target = 'blank'>course webpage</a>]</li>
+  <li>Vector and Matrices II</li>
+  <li>Statistical Methods II</li>
+  <li>Numerical Analysis</li>
+</ul>
+</details>
+
+---
 
 ## Second Year
 
-| Semester III | Semester IV |
-|---|---|
-| Analysis III | Introduction to Stochastic Processes |
-| Probability Theory III | Discrete Mathematics |
-| Statistical Methods III | Statistical Methods IV |
-| Elements of Algebraic Structures | Differential Equations |
-| Geology *(Elective)* | Agricultural Science *(Elective)* |
+<details>
+<summary>Semester III</summary>
+<ul>
+  <li>Analysis III</li>
+  <li>Probability Theory III</li>
+  <li>Statistical Methods III</li>
+  <li>Elements of Algebraic Structures</li>
+  <li>Geology <small>(Elective)</small></li>
+  <li>Coding Theory <small>(Audited)</small></li>
+</ul>
+</details>
 
-## Audited
+<details>
+<summary>Semester IV</summary>
+<ul>
+  <li>Introduction to Stochastic Processes</li>
+  <li>Discrete Mathematics [<a href = 'https://sites.google.com/view/discrete-maths-b2/home' target = 'blank'>course webpage</a>]</li>
+  <li>Statistical Methods IV</li>
+  <li>Differential Equations</li>
+  <li>Agricultural Science <small>(Elective)</small></li>
+</ul>
+</details>
 
-- Coding Theory — Semester III
