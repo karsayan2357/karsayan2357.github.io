@@ -60,3 +60,17 @@ These are the courses that I have taken during my B.Stat. at <a href = 'https://
 </ul>
 </details>
 
+## Third Year
+
+<details>
+<summary>Semester V [<a href = 'https://drive.google.com/drive/folders/1CZ-qj889K-_PI8M2RsZPQJrttrepee31?usp=share_link' target = 'blank'>notes</a>]</summary>
+<ul>
+  <li>Introduction to Commutative Algebra <small>(Audited)</small> [<a href = 'https://github.com/karsayan2357/commutative-algebra' target = 'blank'>repo</a>]</li>
+  <li>Design and Analysis of Algorithms </li>
+  <li>Linear Statistical Models</li>
+  <li>Parametric Inference</li>
+  <li>Economical & Official Statistics</li>
+  <li>Sample Survey</li>
+</ul>
+</details>
+
