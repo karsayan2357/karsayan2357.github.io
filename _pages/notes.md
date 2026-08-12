@@ -5,6 +5,8 @@ layout: single
 author_profile: true
 ---
 
+[This](https://github.com/karsayan2357/my-templates) is the repo where I have collected(or collecting) all the templates I use for my notes, lecture notes, presentations etc.
+
 ## Computer Science
 1. Locally Decodable Codes \[[pdf](https://github.com/karsayan2357/locally-decodable-codes/blob/main/ldc.pdf)\] \[[repo](https://github.com/karsayan2357/locally-decodable-codes/tree/main)\]
 2. Introduction to List Decoding \[[pdf](https://github.com/karsayan2357/Expository-Writings/blob/main/pdf/ls_dec_main.pdf)\] \[[source](https://github.com/karsayan2357/Expository-Writings/tree/main/list%20decoding%20)\]
