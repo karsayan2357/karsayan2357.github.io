@@ -9,7 +9,9 @@ katex: true
 In this blog, we shall see a connection between the famous [Catalan Number](https://en.wikipedia.org/wiki/Catalan_number) and the abstract data structure [Stack](https://en.wikipedia.org/wiki/Stack_(abstract_data_type)).  
 ## Set-Up 
  We shall do the following process to obtain certain permutations of $\{1, \ldots, n\}$ using a stack. 
-	**Process.** $\texttt{PUSH}$ $1, \ldots, n$ in this order with $\texttt{POP}$'s allowed in any intermediate step. The final $\texttt{POP}$-ed string is a permutation of $\{1, \ldots, n\}$. 
+
+**Process.** $\texttt{PUSH}$ $1, \ldots, n$ in this order with $\texttt{POP}$'s allowed in any intermediate step. The final $\texttt{POP}$-ed string is a permutation of $\{1, \ldots, n\}$. 
+
 Now the interesting thing here is that when we try to count the number of permutations obtainable from here, Catalan number pops out! 
 
 $\textbf{Theorem.}$ The number of permutations obtainable from the above process is $C_{n} = \dfrac{1}{n+1}\dbinom{2n}{n}$.
@@ -41,3 +43,4 @@ Showing $\varphi$ is trivial, hence we have established an equivalence between $
 $$
 \# B = \# A = C_{n}.
 $$
+
